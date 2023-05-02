@@ -85,6 +85,8 @@ const CheckoutForm = ({ totalPrice, paymentHandler }) => {
 			setProcessing(false);
 			setSucceeded(true);
 
+
+
 			if (result.paymentIntent.status === 'succeeded') {
 				console.log('[PaymentIntent]', result.paymentIntent);
 				paymentHandler(result.paymentIntent);
