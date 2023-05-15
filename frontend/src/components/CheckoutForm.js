@@ -45,7 +45,7 @@ const CheckoutForm = ({ totalPrice, paymentHandler }) => {
 			setClientSecret(data.client_secret);
 		};
 
-		createPaymentIntent();
+		createPaymentIntent().then(r => r );
 	}, []);
 
 	const handleChange = async (event) => {
